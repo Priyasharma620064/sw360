@@ -202,7 +202,6 @@ public class ImportExportController implements RepresentationModelProcessor<Repo
                     @Parameter(name = "Content-Type", in = ParameterIn.HEADER, required = true, description = "The content type of the request. Supported values: multipart/mixed or multipart/form-data.")
             }
     )
-    @PreAuthorize("hasAuthority('WRITE')")
     @PostMapping(
             value = IMPORTEXPORT_URL + "/uploadComponent",
             consumes = {MediaType.MULTIPART_MIXED_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE},
@@ -227,7 +226,6 @@ public class ImportExportController implements RepresentationModelProcessor<Repo
                     @Parameter(name = "Content-Type", in = ParameterIn.HEADER, required = true,  description = "The content type of the request. Supported values: multipart/mixed or multipart/form-data."),
             }
     )
-    @PreAuthorize("hasAuthority('WRITE')")
     @PostMapping(
             value = IMPORTEXPORT_URL + "/uploadRelease",
             consumes = {MediaType.MULTIPART_MIXED_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE},
@@ -252,7 +250,6 @@ public class ImportExportController implements RepresentationModelProcessor<Repo
                     @Parameter(name = "Content-Type", in = ParameterIn.HEADER, required = true,  description = "The content type of the request. Supported values: multipart/mixed or multipart/form-data."),
             }
     )
-    @PreAuthorize("hasAuthority('WRITE')")
     @PostMapping(
             value = IMPORTEXPORT_URL + "/componentAttachment",
             consumes = {MediaType.MULTIPART_MIXED_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE},
